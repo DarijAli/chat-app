@@ -1,0 +1,20 @@
+.joinchat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  .joinchat-tab {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .joinchat-input {
+      padding: 1em 0em;
+      .ant-input {
+        padding: 1em;
+        border-radius: 5px;
+        // padding-right: 9em;
+      }
+    }
+  }
+}

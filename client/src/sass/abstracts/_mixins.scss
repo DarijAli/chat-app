@@ -1,0 +1,194 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+@use './variables' as v;
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin dflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin dflex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin ff($color, $font-size, $font-weight) {
+  font-family: v.$font-family;
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin button($name, $color, $font-size, $font-weight, $background-color) {
+  .button-#{$name} {
+    @include ff($color, $font-size, $font-weight);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $background-color;
+    box-shadow: 0px 15px 15px -10px $background-color;
+    width: 100%;
+    max-width: 432px;
+    border: 1px solid $background-color;
+    margin-bottom: 1rem;
+    text-align: center;
+    .button-text-container {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .button-gmail {
+      padding-right: 15px;
+      img {
+        object-fit: unset;
+      }
+    }
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  // $breakpoint is simply a variable that can have several values
+  //breakpoints similar to ant design breakpoints
+
+  @if $breakpoint==xxl {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 1200px) and (max-width: 1600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==md {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==sm {
+    // here `laptop` is the value of $breakpoint
+    // when call laptop, we mean the following piece of code
+
+    @media only screen and (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xs {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+}
+
+@mixin font-source-montserrat(
+  $size: false,
+  $colour: false,
+  $weight: false,
+  $lh: false
+) {
+  font-family: "Montserrat";
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $weight {
+    font-weight: $weight;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-column {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin flex-center-vert {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horiz {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin slide-in-from-right {
+  animation: slide-right 0.3s ease;
+  @keyframes slide-right {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}

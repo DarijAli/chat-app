@@ -1,0 +1,89 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular font family
+/// @type List
+$text-font-stack: "Montserrat" !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+  "Monaco", monospace !default;
+
+/// Copy text color
+/// @type Color
+$text-color: rgb(34, 34, 34) !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: rgb(229, 0, 80) !default;
+
+/// Light grey
+/// @type Color
+$light-grey: rgb(237, 237, 237) !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: rgb(153, 153, 153) !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: rgb(68, 68, 68) !default;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  "small": 320px,
+  "medium": 768px,
+  "large": 1024px,
+) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: "/assets/" !default;
+
+//font sizes
+$font-bold-large: 3.125em !important;
+$font-bold-medium: 1.6875em !important;
+$font-bold-small: 1.375em !important;
+$font-semibold-large: 1.875em !important;
+$font-semibold-medium: 1.5em !important;
+$font-semibold-small: 1.375em !important;
+$font-regular-large: 1.25em !important;
+$font-regular-medium: 1.75em !important;
+$font-regular-small: 0.4375em !important;
+$font-light-large: 1.375em !important;
+$font-light-medium: 1.875em !important;
+$font-light-small: 1.5em !important;
+$font-light-extrasmall: 1em !important;
+$font-light-ultrasmall: 0.875em !important;
+$font-medium: 1.25em !important;
+$font-medium-small: 0.875em !important;
+
+// font weight
+
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+
+//font family
+
+$font-family: Montserrat;
+
+//Breakpoints
+
+$breakpoint-extrasmall: 320px;
+$breakpoint-small: 768px;
+$breakpoint-medium: 960px;
+$breakpoint-large: 1280px;
+$breakpoint-extralarge: 1920px;

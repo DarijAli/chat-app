@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="72" viewBox="0 0 71 72">
+  <g id="Send_Button" data-name="Send Button" transform="translate(-0.454 0.283)">
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="71" height="72" rx="35.5" transform="translate(0.454 -0.283)" fill="#1e4897"/>
+    <g id="icon.send" transform="translate(31.575 17.577) rotate(45)">
+      <line id="Line_2" data-name="Line 2" x1="13.744" y2="13.744" transform="translate(14.231 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_76" data-name="Path 76" d="M27.975,0,22.214,27.975,14.231,13.744,0,5.761Z" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>
